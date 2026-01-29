@@ -85,6 +85,7 @@
     vesktop
     alacritty
     vlc
+    vscode
     
     # Hyprland essentials
     kitty
