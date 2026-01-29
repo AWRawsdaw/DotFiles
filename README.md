@@ -1,0 +1,1 @@
+My beautiful Hyprland setup
