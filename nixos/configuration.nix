@@ -60,6 +60,10 @@
     pulse.enable = true;
   };
 
+  # Bluetooth
+  hardware.bluetooth.enable = true;
+  services.blueman.enable = true;
+
   # Auto-mount drives
   services.udisks2.enable = true;
   services.gvfs.enable = true;
@@ -93,7 +97,7 @@
     waybar
     mako
     bibata-cursors
-    
+
     # File manager
     kdePackages.dolphin
     
@@ -104,7 +108,10 @@
     grimblast
     hyprpaper
     fastfetch
-    
+    blueman
+    pavucontrol
+    libnotify
+
     # Tools
     git
     vim

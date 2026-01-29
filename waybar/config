@@ -9,7 +9,7 @@
     
     "modules-left": ["hyprland/workspaces", "hyprland/window"],
     "modules-center": ["clock"],
-    "modules-right": ["custom/spotify", "cava", "custom/gpu-temp", "custom/cpu-temp", "custom/ram", "pulseaudio", "custom/power"],
+    "modules-right": ["custom/spotify", "cava", "custom/gpu-temp", "custom/cpu-temp", "custom/ram", "custom/audio", "custom/power"],
 
     "hyprland/workspaces": {
         "format": "{name}",
@@ -76,12 +76,10 @@
         "exec": "free | awk '/^Mem:/ {printf \"%.0f\", $3/$2 * 100}'"
     },
 
-    "pulseaudio": {
-        "format": "{icon} {volume}%",
-        "format-muted": " Muted",
-        "format-icons": {
-            "default": ["", "", ""]
-        },
+    "custom/audio": {
+        "format": "{}",
+        "interval": 1,
+        "exec": "~/.config/waybar/scripts/audio.sh",
         "on-click": "pavucontrol"
     },
 

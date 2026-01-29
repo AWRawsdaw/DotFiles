@@ -80,15 +80,27 @@ window#waybar {
     border-radius: 8px;
 }
 
-#pulseaudio {
+#custom-audio {
     padding: 0 15px;
     color: #89b4fa;
     background: rgba(137, 180, 250, 0.15);
     border-radius: 8px;
 }
 
-#pulseaudio.muted {
+#custom-audio-muted {
     color: #f38ba8;
+}
+
+#custom-bluetooth {
+    padding: 0 15px;
+    color: #89b4fa;
+    background: rgba(137, 180, 250, 0.15);
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+#custom-bluetooth.disabled {
+    color: #7f849c;
 }
 
 #custom-power {
