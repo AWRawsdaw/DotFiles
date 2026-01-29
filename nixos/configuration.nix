@@ -92,6 +92,7 @@
     rofi
     waybar
     mako
+    bibata-cursors
     
     # File manager
     kdePackages.dolphin
