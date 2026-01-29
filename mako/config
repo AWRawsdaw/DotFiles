@@ -1,0 +1,4 @@
+default-timeout=5000
+
+[app-name=Spotify]
+invisible=1
