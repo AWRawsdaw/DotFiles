@@ -1,0 +1,45 @@
+* {
+    bg: rgba(20, 20, 30, 0.9);
+    bg-selected: rgba(137, 180, 250, 0.3);
+    fg: #ffffff;
+    fg-selected: #89b4fa;
+    border: #89b4fa;
+}
+
+window {
+    background-color: @bg;
+    border: 2px;
+    border-color: @border;
+    border-radius: 12px;
+    padding: 20px;
+    width: 300px;
+}
+
+mainbox {
+    background-color: transparent;
+    children: [ listview ];
+}
+
+listview {
+    background-color: transparent;
+    lines: 3;
+    spacing: 10px;
+}
+
+element {
+    background-color: transparent;
+    text-color: @fg;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+element selected {
+    background-color: @bg-selected;
+    text-color: @fg-selected;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
+}

@@ -1,0 +1,74 @@
+* {
+    bg: rgba(20, 20, 30, 0.9);
+    bg-selected: rgba(137, 180, 250, 0.3);
+    fg: #ffffff;
+    fg-selected: #89b4fa;
+    border: #89b4fa;
+    prompt-bg: rgba(137, 180, 250, 0.2);
+}
+
+window {
+    background-color: @bg;
+    border: 2px;
+    border-color: @border;
+    border-radius: 12px;
+    padding: 20px;
+    width: 600px;
+}
+
+mainbox {
+    background-color: transparent;
+    children: [ inputbar, listview ];
+    spacing: 15px;
+}
+
+inputbar {
+    background-color: transparent;
+    children: [ prompt, entry ];
+    spacing: 10px;
+}
+
+prompt {
+    background-color: @prompt-bg;
+    text-color: @fg-selected;
+    padding: 12px 15px;
+    border-radius: 8px;
+}
+
+entry {
+    background-color: rgba(255, 255, 255, 0.05);
+    text-color: @fg;
+    padding: 12px 15px;
+    border-radius: 8px;
+    placeholder: "Search apps...";
+    placeholder-color: rgba(255, 255, 255, 0.3);
+}
+
+listview {
+    background-color: transparent;
+    lines: 8;
+    spacing: 5px;
+}
+
+element {
+    background-color: transparent;
+    text-color: @fg;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+element selected {
+    background-color: @bg-selected;
+    text-color: @fg-selected;
+}
+
+element-icon {
+    size: 24px;
+    margin: 0 10px 0 0;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
+}
