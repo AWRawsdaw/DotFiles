@@ -16,13 +16,13 @@
   # Locale
   time.timeZone = "Europe/Amsterdam";
   i18n.defaultLocale = "en_US.UTF-8";
-  
-  # Hardware
+
   # Auto-mount internal drive
   fileSystems."/mnt/internal" = {
     device = "/dev/disk/by-uuid/5db7cbb1-60ce-4867-80ea-998dccda13ca";
     fsType = "ext4";
-};  
+  };
+
   # NVIDIA
   services.xserver.enable = true;
   services.xserver.videoDrivers = [ "nvidia" ];
@@ -60,13 +60,20 @@
     pulse.enable = true;
   };
 
+  # Auto-mount drives
+  services.udisks2.enable = true;
+  services.gvfs.enable = true;
+
+  # Polkit
+  security.polkit.enable = true;
+
   # Steam
   programs.steam.enable = true;
 
   # User
   users.users.ashmity = {
     isNormalUser = true;
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "storage" "disk" ];
   };
 
   # Packages
@@ -78,20 +85,24 @@
     vesktop
     alacritty
     vlc
- 
+    
     # Hyprland essentials
     kitty
     rofi
     waybar
     mako
+    
+    # File manager
     kdePackages.dolphin
+    
+    # System tools
     udisks
     playerctl
     cava
     grimblast
     hyprpaper
-    fastfetch    
-
+    fastfetch
+    
     # Tools
     git
     vim
