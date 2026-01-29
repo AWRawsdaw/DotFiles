@@ -1,1 +1,1 @@
-My beautiful Hyprland setup
+My NixOS + Hyprland Setup
